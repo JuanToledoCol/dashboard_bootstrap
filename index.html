@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Bootstrap 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Icons Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Inicio panel -->
+            <div class="col-2 p-0">
+                <div class="vh-100 bg-dark">
+                    <div class="pt-2">
+                        <h1 class="text-white text-center">Dashboard</h1>
+                        <hr class="border border-white border-2">
+                    </div>
+                    <!-- Inicio botón collapse del Inventario -->
+                    <div class="mx-4">
+                        <p class="m-0 p-0 ">
+                            <i class="bi bi-card-list fs-3 text-white align-middle me-2"></i>
+                            <a class="text-white text-decoration-none text-center" data-bs-toggle="collapse"
+                                href="#inventario" role="button" aria-expanded="false"
+                                aria-controls="inventario">Inventario</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="inventario">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>
+                                            <a href="#" class="text-white text-decoration-none">Ver Inventario</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>
+                                            <a href="#" class="text-white text-decoration-none">Agregar Producto</a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-trash fs-4 text-white align-middle me-2"></i>
+                                            <a href="#" class="text-white text-decoration-none">Eliminar Producto</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Fin botón collapse del invantario -->
+                    <!-- Inicio botón collapse de roles -->
+                    <div class="mx-4">
+                        <p class="m-0 p-0 ">
+                            <i class="bi bi-people-fill fs-3 text-white align-middle me-2"></i>
+                            <a class="text-white text-decoration-none text-center" data-bs-toggle="collapse"
+                                href="#roles" role="button" aria-expanded="false"
+                                aria-controls="roles">Roles</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="roles">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>
+                                            <a href="#" class="text-white text-decoration-none">Administrar roles</a>
+                                            <ul>
+                                                <li class="mb-2">
+                                                    <i class="bi bi-person-plus fs-4 text-white align-middle me-2"></i>
+                                                    <a href="#" class="text-white text-decoration-none">Asignar nuevo rol</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-receipt-cutoff fs-4 text-white align-middle me-2"></i>
+                                            <a href="#" class="text-white text-decoration-none">Asignar Trabajo</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Fin botón collapse de roles -->
+                </div>
+            </div>
+            <!-- Fin paneñ -->
+
+            <div class="col p-0">
+                <!-- Inicio Navbar -->
+                <nav class="navbar" style="background-color: #e3f2fd;">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                            <button class="btn btn-outline-dark" type="submit">Search</button>
+                        </form>
+                        <!-- Icons navbar -->
+                        <div class="me-4">
+                            <div class="btn-group">
+                                <a href="#" class="text-dark m-1" title="LogIn">
+                                    <i class="bi bi-person-circle fs-1"></i>
+                                </a>
+                                <a href="#" class="text-dark m-1" title="LogOut">
+                                    <i class="bi bi-box-arrow-right fs-1"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="bi bi-person-square text-dark fs-1"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    </ul>
+                                </div>
+                                <button class="btn" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#sidebarNoti" aria-expanded="false" aria-controls="sidebarNoti">
+                                    <i class="bi bi-bell text-dark fs-1"></i>
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Fin Navbar -->
+
+                <!-- Inicio Content -->
+                <div class="container-fluid">
+                    <!-- Inicio Sección Inventarios -->
+                    <div class="m-4" id="seccionInventario">
+                        <h1><i class="bi bi-card-list fs-1 text-dark align-middle me-2"></i> Inventario</h1>
+                        <div class="table-responsive">
+                            <table class="table caption-top">
+                                <caption>Inventario Global</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre Producto</th>
+                                        <th scope="col">Subcategoria</th>
+                                        <th scope="col">Modelo</th>
+                                        <th scope="col">Marca</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Costo</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Licuadora</td>
+                                        <td>Licuadoras</td>
+                                        <td>BD4000</td>
+                                        <td>Black&Decker</td>
+                                        <td>Licuadora de 4000W</td>
+                                        <td>$ 17.800</td>
+                                        <td>$ 21.500</td>
+                                        <td>45</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Plancha</td>
+                                        <td>Planchas</td>
+                                        <td>HP-100</td>
+                                        <td>Hamilton Beach</td>
+                                        <td>Plancha de 100W</td>
+                                        <td>$ 15.000</td>
+                                        <td>$ 18.000</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Aspiradora</td>
+                                        <td>Aspiradoras</td>
+                                        <td>VC-100</td>
+                                        <td>Vacmaster</td>
+                                        <td>Aspiradora de 100W</td>
+                                        <td>$ 20.000</td>
+                                        <td>$ 25.000</td>
+                                        <td>20</td>
+                                </tbody>
+                            </table>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link">Anterior</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Siguiente</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                    <!-- Fin Sección Inventarios -->
+                </div>
+                <!-- Fin Content -->
+            </div>
+
+            <!-- Inicio sidebar derecho -->
+            <div class="col-2 p-0 collapse collapse-horizontal" id="sidebarNoti">
+                <div class="vh-100 bg-dark text-center">
+                    <h4 class="text-white pt-2">Notificaciones</h1>
+                        <hr class="border border-white border-2">
+                        <button type="button" class="btn btn-primary">
+                            Notificaciones <span class="badge text-bg-secondary">4</span>
+                        </button>
+                </div>
+            </div>
+            <!-- Fin  -->
+            <div class="row text-center p-2" style="background-color: #e3f2fd;">
+                <div class="col-4">
+                    Footer 1
+                </div>
+                <div class="col-4">
+                    Footer 2
+                </div>
+                <div class="col-4">
+                    Footer 3
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- JS Bootstrap 5.2 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
