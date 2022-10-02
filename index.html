@@ -15,88 +15,12 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <!-- Inicio panel -->
-            <div class="col-2 p-0">
-                <div class="vh-100 bg-dark">
-                    <div class="pt-2">
-                        <h1 class="text-white text-center">Dashboard</h1>
-                        <hr class="border border-white border-2">
-                    </div>
-                    <!-- Inicio botón collapse del Inventario -->
-                    <div class="mx-4">
-                        <p class="m-0 p-0 ">
-                            <i class="bi bi-card-list fs-3 text-white align-middle me-2"></i>
-                            <a class="text-white text-decoration-none text-center" data-bs-toggle="collapse"
-                                href="#inventario" role="button" aria-expanded="false"
-                                aria-controls="inventario">Inventario</a>
-                        </p>
-                        <div class="row">
-                            <div class="col">
-                                <div class="collapse multi-collapse" id="inventario">
-                                    <ul>
-                                        <li class="mb-2">
-                                            <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>
-                                            <a href="#" class="text-white text-decoration-none">Ver Inventario</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>
-                                            <a href="#" class="text-white text-decoration-none">Agregar Producto</a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-trash fs-4 text-white align-middle me-2"></i>
-                                            <a href="#" class="text-white text-decoration-none">Eliminar Producto</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Fin botón collapse del invantario -->
-                    <!-- Inicio botón collapse de roles -->
-                    <div class="mx-4">
-                        <p class="m-0 p-0 ">
-                            <i class="bi bi-people-fill fs-3 text-white align-middle me-2"></i>
-                            <a class="text-white text-decoration-none text-center" data-bs-toggle="collapse"
-                                href="#roles" role="button" aria-expanded="false"
-                                aria-controls="roles">Roles</a>
-                        </p>
-                        <div class="row">
-                            <div class="col">
-                                <div class="collapse multi-collapse" id="roles">
-                                    <ul>
-                                        <li class="mb-2">
-                                            <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>
-                                            <a href="#" class="text-white text-decoration-none">Administrar roles</a>
-                                            <ul>
-                                                <li class="mb-2">
-                                                    <i class="bi bi-person-plus fs-4 text-white align-middle me-2"></i>
-                                                    <a href="#" class="text-white text-decoration-none">Asignar nuevo rol</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-receipt-cutoff fs-4 text-white align-middle me-2"></i>
-                                            <a href="#" class="text-white text-decoration-none">Asignar Trabajo</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Fin botón collapse de roles -->
-                </div>
-            </div>
-            <!-- Fin paneñ -->
-
+        <div class="row" >
             <div class="col p-0">
                 <!-- Inicio Navbar -->
                 <nav class="navbar" style="background-color: #e3f2fd;">
                     <div class="container-fluid">
+                        <a class="navbar-brand" href="#">IncoveApp</a>
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                             <button class="btn btn-outline-dark" type="submit">Search</button>
@@ -105,15 +29,15 @@
                         <div class="me-4">
                             <div class="btn-group">
                                 <a href="#" class="text-dark m-1" title="LogIn">
-                                    <i class="bi bi-person-circle fs-1"></i>
+                                    <i class="bi bi-person-circle fs-4"></i>
                                 </a>
                                 <a href="#" class="text-dark m-1" title="LogOut">
-                                    <i class="bi bi-box-arrow-right fs-1"></i>
+                                    <i class="bi bi-box-arrow-right fs-4"></i>
                                 </a>
                                 <div class="dropdown">
                                     <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <i class="bi bi-person-square text-dark fs-1"></i>
+                                        <i class="bi bi-person-square text-dark fs-4"></i>
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-end">
@@ -122,7 +46,7 @@
                                 </div>
                                 <button class="btn" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#sidebarNoti" aria-expanded="false" aria-controls="sidebarNoti">
-                                    <i class="bi bi-bell text-dark fs-1"></i>
+                                    <i class="bi bi-bell text-dark fs-4"></i>
                                 </button>
 
 
@@ -131,15 +55,207 @@
                     </div>
                 </nav>
                 <!-- Fin Navbar -->
+            </div>
+        </div>
+        <div class="row">
+            <!-- Inicio panel -->
+            <div class="col-2 p-0">
+                <div class="vh-100 bg-dark">
+                    <div class="pt-2">
+                        <h1 class="text-white text-center">Dashboard</h1>
+                        <hr class="border border-white border-2">
+                    </div>
+
+                    <!-- Inicio botón collapse del Inventario -->
+                    <div class="mx-4">
+                        <p class="m-0 p-0 ">
+                            <i class="bi bi-card-list fs-3 text-white align-middle me-2"></i>
+                            <a class="text-white text-decoration-none text-center" data-bs-toggle="collapse"
+                                href="#panelInventario" role="button" aria-expanded="false"
+                                aria-controls="inventario">Inventario</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="panelInventario">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>
+                                            <a href="#seccionInventario" class="text-white text-decoration-none">Ver
+                                                Inventario</a>
+                                        </li>
+                                        <ul>
+                                            <li class="mb-2">
+                                                <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>
+                                                <a href="#" class="text-white text-decoration-none">Agregar Producto</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-trash fs-4 text-white align-middle me-2"></i>
+                                                <a href="#" class="text-white text-decoration-none">Eliminar
+                                                    Producto</a>
+                                            </li>
+                                        </ul>
+                                        <li class="mb-2">
+                                            <i class="bi bi-table fs-4 text-white align-middle me-2"></i>
+                                            <a href="#" class="text-white text-decoration-none">Reportes</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Fin botón collapse del invantario -->
+
+                    <!-- Inicio botón collapse de roles -->
+                    <div class="mx-4">
+                        <p class="m-0 p-0 ">
+                            <i class="bi bi-people-fill fs-3 text-white align-middle me-2"></i>
+                            <a class="text-white text-decoration-none text-center" data-bs-toggle="collapse"
+                                href="#panelRoles" role="button" aria-expanded="false" aria-controls="roles">Roles</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="panelRoles">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>
+                                            <a href="#seccionRoles" class="text-white text-decoration-none">Administrar
+                                                roles</a>
+                                            <ul>
+                                                <li class="mb-2">
+                                                    <i class="bi bi-person-plus fs-4 text-white align-middle me-2"></i>
+                                                    <a href="#" class="text-white text-decoration-none">Asignar nuevo
+                                                        rol</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-receipt-cutoff fs-4 text-white align-middle me-2"></i>
+                                            <a href="#" class="text-white text-decoration-none">Asignar Trabajo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Fin botón collapse de roles -->
+
+                </div>
+            </div>
+            <!-- Fin panel -->
+
+            <div class="col p-0">
 
                 <!-- Inicio Content -->
                 <div class="container-fluid">
+
                     <!-- Inicio Sección Inventarios -->
                     <div class="m-4" id="seccionInventario">
-                        <h1><i class="bi bi-card-list fs-1 text-dark align-middle me-2"></i> Inventario</h1>
+                        <h1><i class="bi bi-card-list fs-1 text-dark align-middle me-2"></i>Inventario</h1>
                         <div class="table-responsive">
-                            <table class="table caption-top">
-                                <caption>Inventario Global</caption>
+
+                            <!-- menú de la tabla -->
+                            <nav class="navbar bg-light">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand">Inventario Global</a>
+                                    <form class="d-flex m-0" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search"
+                                            aria-label="Search">
+                                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                                    </form>
+
+                                    <!-- Inicio Botón modal crear producto -->
+                                    <button type="submit" class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#modalCrearProducto">
+                                        <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>Crear 1
+                                        producto
+                                    </button>
+                                    <!-- Fin Botón modal crear producto -->
+
+                                    <!-- Inicio Botón modal crear producto -->
+                                    <button type="submit" class="btn btn-success">
+                                        <i
+                                            class="bi bi-file-earmark-spreadsheet fs-4 text-white align-middle me-2"></i>Crear
+                                        desde Excel
+                                    </button>
+                                    <!-- Fin Botón modal crear producto -->
+
+                                    <!-- Inicio modal crear producto-->
+                                    <div class="modal fade" id="modalCrearProducto" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Crear Producto</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+
+                                                    <!-- Formulario Crear Producto -->
+                                                    <form action="">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Nombre Producto</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Ventilador">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Subcategoria</label>
+                                                            <select class="form-select">
+                                                                <option selected>Seleccione una opción</option>
+                                                                <option value="1">Agua</option>
+                                                                <option value="2">Aire</option>
+                                                                <option value="3">Fuego</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Modelo</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="VC-102">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Marca</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Samurai">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Descripción</label>
+                                                            <textarea class="form-control" rows="2"></textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Costo</label>
+                                                            <input type="number" class="form-control"
+                                                                placeholder="95.000">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Precio</label>
+                                                            <input type="number" class="form-control"
+                                                                placeholder="100.000">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Stock</label>
+                                                            <input type="text" class="form-control" placeholder="100">
+                                                        </div>
+                                                    </form>
+                                                    <!-- Fin formulario crear producto -->
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-primary">Crear</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- fin modal crear producto -->
+
+                                </div>
+                            </nav>
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">ID</th>
@@ -151,6 +267,7 @@
                                         <th scope="col">Costo</th>
                                         <th scope="col">Precio</th>
                                         <th scope="col">Stock</th>
+                                        <th scope="col">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -164,6 +281,12 @@
                                         <td>$ 17.800</td>
                                         <td>$ 21.500</td>
                                         <td>45</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary"><i
+                                                    class="bi bi-pencil-square fs-4 text-white align-middle"></i></button>
+                                            <button type="submit" class="btn btn-danger"><i
+                                                    class="bi bi-trash fs-4 text-white align-middle"></i></button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -175,6 +298,12 @@
                                         <td>$ 15.000</td>
                                         <td>$ 18.000</td>
                                         <td>30</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary"><i
+                                                    class="bi bi-pencil-square fs-4 text-white align-middle"></i></button>
+                                            <button type="submit" class="btn btn-danger"><i
+                                                    class="bi bi-trash fs-4 text-white align-middle"></i></button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -186,6 +315,12 @@
                                         <td>$ 20.000</td>
                                         <td>$ 25.000</td>
                                         <td>20</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary"><i
+                                                    class="bi bi-pencil-square fs-4 text-white align-middle"></i></button>
+                                            <button type="submit" class="btn btn-danger"><i
+                                                    class="bi bi-trash fs-4 text-white align-middle"></i></button>
+                                        </td>
                                 </tbody>
                             </table>
                             <nav aria-label="Page navigation example">
@@ -201,10 +336,92 @@
                                     </li>
                                 </ul>
                             </nav>
-                        </div>
+                            <div>
+                                <h3>Reportes</h3>
+                                <div class="card text-center">
+                                    <div class="card-header d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <div class="vr"></div>
+                                        <button type="submit" class="btn btn-outline-dark"><i
+                                                class="bi bi-file-earmark-pdf fs-4 text-outline-dark align-middle me-2"></i>Exportar
+                                            como PDF</button>
+                                        <div class="vr"></div>
+                                        <button type="submit" class="btn btn-outline-dark"><i
+                                                class="bi bi-file-earmark-spreadsheet fs-4 text-outline-dark align-middle me-2"></i>
+                                            Exportar como Excel</button>
+                                        <div class="vr"> </div>
+                                        <button type="submit" class="btn btn-outline-dark"><i
+                                                class="bi bi-filetype-csv fs-4 text-outline-dark align-middle me-2"></i>Exportar
+                                            como CSV</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Seleccionar
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Reporte de ventas</h5>
+                                                        <p class="card-text">Reporte de ventas por mes.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Seleccionar
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Reporte de Ganancias</h5>
+                                                        <p class="card-text">Reporte de ganancias por mes.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                                Seleccionar
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Reporte de Inventario</h5>
+                                                        <p class="card-text">Reporte de inventario de empleados.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- Fin Sección Inventarios -->
+
+                    <hr class="border border-dark border-2">
+
+                    <!-- Inicio Sección de Roles -->
+                    <div class="m-4" id="seccionRoles">
+                        <h1><i class="bi bi-card-list fs-1 text-dark align-middle me-2"></i>Roles</h1>
+                    </div>
+                    <!-- Fin Sección de Roles -->
                 </div>
                 <!-- Fin Content -->
             </div>
@@ -220,6 +437,8 @@
                 </div>
             </div>
             <!-- Fin  -->
+
+            <!-- Inicio footer -->
             <div class="row text-center p-2" style="background-color: #e3f2fd;">
                 <div class="col-4">
                     Footer 1
@@ -231,6 +450,7 @@
                     Footer 3
                 </div>
             </div>
+            <!-- Fin footer -->
         </div>
 
 
