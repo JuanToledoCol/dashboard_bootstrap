@@ -15,7 +15,7 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row" >
+        <div class="row">
             <div class="col p-0">
                 <!-- Inicio Navbar -->
                 <nav class="navbar" style="background-color: #e3f2fd;">
@@ -86,7 +86,9 @@
                                         <ul>
                                             <li class="mb-2">
                                                 <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>
-                                                <a href="#" class="text-white text-decoration-none">Agregar Producto</a>
+                                                <a href="#modalCrearProducto" class="text-white text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#modalCrearProducto">Agregar
+                                                    Producto</a>
                                             </li>
                                             <li class="mb-2">
                                                 <i class="bi bi-trash fs-4 text-white align-middle me-2"></i>
@@ -96,7 +98,8 @@
                                         </ul>
                                         <li class="mb-2">
                                             <i class="bi bi-table fs-4 text-white align-middle me-2"></i>
-                                            <a href="#" class="text-white text-decoration-none">Reportes</a>
+                                            <a href="#seccionReportes"
+                                                class="text-white text-decoration-none">Reportes</a>
                                         </li>
                                     </ul>
 
@@ -105,7 +108,6 @@
 
                         </div>
                     </div>
-
                     <!-- Fin botón collapse del invantario -->
 
                     <!-- Inicio botón collapse de roles -->
@@ -126,14 +128,16 @@
                                             <ul>
                                                 <li class="mb-2">
                                                     <i class="bi bi-person-plus fs-4 text-white align-middle me-2"></i>
-                                                    <a href="#" class="text-white text-decoration-none">Asignar nuevo
-                                                        rol</a>
+                                                    <a href="#modalCrearEmpleado"
+                                                        class="text-white text-decoration-none" data-bs-toggle="modal"
+                                                        data-bs-target="#modalCrearEmpleado">Crear Empleado</a>
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="bi bi-trash fs-4 text-white align-middle me-2"></i>
+                                                    <a href="#" class="text-white text-decoration-none">Eliminar
+                                                        empleado</a>
                                                 </li>
                                             </ul>
-                                        </li>
-                                        <li class="mb-2">
-                                            <i class="bi bi-receipt-cutoff fs-4 text-white align-middle me-2"></i>
-                                            <a href="#" class="text-white text-decoration-none">Asignar Trabajo</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -143,6 +147,29 @@
                     </div>
                     <!-- Fin botón collapse de roles -->
 
+                    <!-- Inicio botón collapse de cobros -->
+                    <div class="mx-4">
+                        <p class="m-0 p-0 ">
+                            <i class="bi bi-coin fs-4 text-white align-middle me-2"></i>
+                            <a class="text-white text-decoration-none text-center" data-bs-toggle="collapse"
+                                href="#panelCobros" role="button" aria-expanded="false" aria-controls="roles">Cobros</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="panelCobros">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>
+                                            <a href="#seccionCobros" class="text-white text-decoration-none">Administrar
+                                                Cobros</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Fin botón collapse de cobros -->
                 </div>
             </div>
             <!-- Fin panel -->
@@ -154,34 +181,45 @@
 
                     <!-- Inicio Sección Inventarios -->
                     <div class="m-4" id="seccionInventario">
-                        <h1><i class="bi bi-card-list fs-1 text-dark align-middle me-2"></i>Inventario</h1>
+                        <h1><i class="bi bi-card-list fs-1 text-dark me-2"></i>Inventario</h1>
                         <div class="table-responsive">
 
-                            <!-- menú de la tabla -->
-                            <nav class="navbar bg-light">
+                            <!-- Inicio tabla inventario global -->
+                            <nav class="navbar" style="background-color: #e3f2fd;">
                                 <div class="container-fluid">
                                     <a class="navbar-brand">Inventario Global</a>
-                                    <form class="d-flex m-0" role="search">
-                                        <input class="form-control me-2" type="search" placeholder="Search"
-                                            aria-label="Search">
-                                        <button class="btn btn-outline-dark" type="submit">Search</button>
-                                    </form>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <form class="d-flex m-0" role="search">
+                                            <input class="form-control me-2" type="search" placeholder="Search"
+                                                aria-label="Search">
+                                            <button class="btn btn-outline-dark" type="submit">Search</button>
+                                        </form>
 
-                                    <!-- Inicio Botón modal crear producto -->
-                                    <button type="submit" class="btn btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#modalCrearProducto">
-                                        <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>Crear 1
-                                        producto
-                                    </button>
-                                    <!-- Fin Botón modal crear producto -->
+                                        <!-- Inicio Botón modal crear producto -->
+                                        <button type="submit" class="btn btn-success" data-bs-toggle="modal"
+                                            data-bs-target="#modalCrearProducto">
+                                            <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>Crear 1
+                                            producto
+                                        </button>
+                                        <!-- Fin Botón modal crear producto -->
 
-                                    <!-- Inicio Botón modal crear producto -->
-                                    <button type="submit" class="btn btn-success">
-                                        <i
-                                            class="bi bi-file-earmark-spreadsheet fs-4 text-white align-middle me-2"></i>Crear
-                                        desde Excel
-                                    </button>
-                                    <!-- Fin Botón modal crear producto -->
+                                        <!-- Inicio Botón excel -->
+                                        <button type="submit" class="btn btn-success">
+                                            <i
+                                                class="bi bi-file-earmark-spreadsheet fs-4 text-white align-middle me-2"></i>Crear
+                                            desde Excel
+                                        </button>
+                                        <!-- Fin Botón modal excel -->
+
+                                        <!-- Inicio Botón asignar inventario-->
+                                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                            data-bs-target="#modalAsignarInventario">
+                                            <i class="bi bi-clipboard-plus fs-4 text-white align-middle"></i> Asignar
+                                            Inventario
+                                        </button>
+                                        <!-- Fin Botón asignar inventario-->
+                                    </div>
+
 
                                     <!-- Inicio modal crear producto-->
                                     <div class="modal fade" id="modalCrearProducto" tabindex="-1"
@@ -253,11 +291,91 @@
                                     </div>
                                     <!-- fin modal crear producto -->
 
+                                    <!-- Inicio modal asignar inventario -->
+                                    <div class="modal fade" id="modalAsignarInventario" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Asignar inventario a
+                                                        empleado</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+
+                                                    <div class="table-responsive">
+                                                        <!-- Inicio tabla asignar trabajo -->
+                                                        <nav class="navbar" style="background-color: #e3f2fd;">
+                                                            <div class="container-fluid">
+                                                                <div
+                                                                    class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                                    <form class="d-flex m-0" role="search">
+                                                                        <input class="form-control me-2" type="search"
+                                                                            placeholder="Search" aria-label="Search">
+                                                                        <button class="btn btn-outline-dark"
+                                                                            type="submit">Buscar</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </nav>
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">ID</th>
+                                                                    <th scope="col">Nombres</th>
+                                                                    <th scope="col">Apellidos</th>
+                                                                    <th scope="col">Usuario</th>
+                                                                    <th scope="col">Correo</th>
+                                                                    <th scope="col">Tipo Documento</th>
+                                                                    <th scope="col"># Documento</th>
+                                                                    <th scope="col">Rol</th>
+                                                                    <th scope="col">Acciones</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">1</th>
+                                                                    <td>Juan Pablo</td>
+                                                                    <td>Bernal Toledo</td>
+                                                                    <td>juanpablo</td>
+                                                                    <td>jp@gmail.com </td>
+                                                                    <td>Cedula</td>
+                                                                    <td>123456789</td>
+                                                                    <td>Vendedor</td>
+                                                                    <td>
+                                                                        <input type="checkbox" class="btn-check"
+                                                                            id="btn-check-outlined" autocomplete="off">
+                                                                        <label class="btn btn-outline-primary"
+                                                                            for="btn-check-outlined">Seleccionar</label><br>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- Fin tabla asignar trabajo -->
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-success">
+                                                        <i
+                                                            class="bi bi-clipboard-plus fs-4 text-white align-middle"></i>
+                                                        Asignar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- fin modal asignar inventario -->
+
                                 </div>
                             </nav>
                             <table class="table">
                                 <thead>
                                     <tr>
+                                        <th scope="col">#</th>
                                         <th scope="col">ID</th>
                                         <th scope="col">Nombre Producto</th>
                                         <th scope="col">Subcategoria</th>
@@ -272,6 +390,10 @@
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <th>
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </th>
                                         <th scope="row">1</th>
                                         <td>Licuadora</td>
                                         <td>Licuadoras</td>
@@ -283,12 +405,16 @@
                                         <td>45</td>
                                         <td>
                                             <button type="submit" class="btn btn-primary"><i
-                                                    class="bi bi-pencil-square fs-4 text-white align-middle"></i></button>
+                                                    class="bi bi-pencil-square fs-5 text-white align-middle"></i></button>
                                             <button type="submit" class="btn btn-danger"><i
-                                                    class="bi bi-trash fs-4 text-white align-middle"></i></button>
+                                                    class="bi bi-trash fs-5 text-white align-middle"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th>
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </th>
                                         <th scope="row">2</th>
                                         <td>Plancha</td>
                                         <td>Planchas</td>
@@ -300,12 +426,16 @@
                                         <td>30</td>
                                         <td>
                                             <button type="submit" class="btn btn-primary"><i
-                                                    class="bi bi-pencil-square fs-4 text-white align-middle"></i></button>
+                                                    class="bi bi-pencil-square fs-5 text-white align-middle"></i></button>
                                             <button type="submit" class="btn btn-danger"><i
-                                                    class="bi bi-trash fs-4 text-white align-middle"></i></button>
+                                                    class="bi bi-trash fs-5 text-white align-middle"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th>
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </th>
                                         <th scope="row">3</th>
                                         <td>Aspiradora</td>
                                         <td>Aspiradoras</td>
@@ -317,9 +447,9 @@
                                         <td>20</td>
                                         <td>
                                             <button type="submit" class="btn btn-primary"><i
-                                                    class="bi bi-pencil-square fs-4 text-white align-middle"></i></button>
+                                                    class="bi bi-pencil-square fs-5 text-white align-middle"></i></button>
                                             <button type="submit" class="btn btn-danger"><i
-                                                    class="bi bi-trash fs-4 text-white align-middle"></i></button>
+                                                    class="bi bi-trash fs-5 text-white align-middle"></i></button>
                                         </td>
                                 </tbody>
                             </table>
@@ -336,10 +466,14 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <div>
+                            <!-- Fin tabla inventario global -->
+
+                            <!--  Inicio Sección Reportes  -->
+                            <div id="seccionReportes">
                                 <h3>Reportes</h3>
                                 <div class="card text-center">
-                                    <div class="card-header d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <div class="card-header d-grid gap-2 d-md-flex justify-content-md-end"
+                                        style="background-color: #e3f2fd;">
                                         <div class="vr"></div>
                                         <button type="submit" class="btn btn-outline-dark"><i
                                                 class="bi bi-file-earmark-pdf fs-4 text-outline-dark align-middle me-2"></i>Exportar
@@ -411,6 +545,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--  Fin Sección Reportes  -->
                         </div>
                     </div>
                     <!-- Fin Sección Inventarios -->
@@ -419,46 +554,509 @@
 
                     <!-- Inicio Sección de Roles -->
                     <div class="m-4" id="seccionRoles">
-                        <h1><i class="bi bi-card-list fs-1 text-dark align-middle me-2"></i>Roles</h1>
+                        <h1><i class="bi bi-people-fill fs-1 text-dark me-2"></i>Roles</h1>
+                        <div class="table-responsive">
+                            <!-- Inicio tabla empleados -->
+                            <nav class="navbar" style="background-color: #e3f2fd;">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand">Empleados</a>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <form class="d-flex m-0" role="search">
+                                            <input class="form-control me-2" type="search" placeholder="Search"
+                                                aria-label="Search">
+                                            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                                        </form>
+
+                                        <!-- Inicio Botón modal crear Empleado -->
+                                        <button type="submit" class="btn btn-success" data-bs-toggle="modal"
+                                            data-bs-target="#modalCrearEmpleado">
+                                            <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>Crear
+                                            Empleado
+                                        </button>
+                                        <!-- Fin Botón modal crear Empleado -->
+                                    </div>
+
+
+                                    <!-- Inicio modal crear producto-->
+                                    <div class="modal fade" id="modalCrearEmpleado" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Crear Empleado</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+
+                                                    <!-- Formulario Crear Producto -->
+                                                    <form action="">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Nombres</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Juan Pablo">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Apellidos</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Bernal Toledo">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Usuario</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Username">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Contraseña</label>
+                                                            <input class="form-control" type="password">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Correo</label>
+                                                            <input type="email" class="form-control"
+                                                                placeholder="ejemplo@gmail.com">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Tipo Documento</label>
+                                                            <select class="form-select">
+                                                                <option selected>Seleccione una opción</option>
+                                                                <option value="1">Cedula</option>
+                                                                <option value="2">Tarjeta Identidad</option>
+                                                                <option value="3">Pasaporte</option>
+                                                                <option value="4">Cedula Extranjera</option>
+                                                                <option value="5">Registro Civil</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Numero Documento</label>
+                                                            <input type="number" class="form-control"
+                                                                placeholder="12.325.094">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Tipo de Rol</label>
+                                                            <select class="form-select">
+                                                                <option selected>Seleccione una opción</option>
+                                                                <option value="1">Vendedor</option>
+                                                                <option value="2">Cobrador</option>
+                                                            </select>
+                                                        </div>
+                                                    </form>
+                                                    <!-- Fin formulario crear producto -->
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="button" class="btn btn-primary">Crear</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- fin modal crear producto -->
+
+                                </div>
+                            </nav>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombres</th>
+                                        <th scope="col">Apellidos</th>
+                                        <th scope="col">Usuario</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Tipo Documento</th>
+                                        <th scope="col"># Documento</th>
+                                        <th scope="col">Rol</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Juan Pablo</td>
+                                        <td>Bernal Toledo</td>
+                                        <td>juanpablo</td>
+                                        <td>jp@gmail.com </td>
+                                        <td>Cedula</td>
+                                        <td>123456789</td>
+                                        <td>Vendedor</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">
+                                                <i class="bi bi-pencil-square fs-4 text-white align-middle"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="bi bi-trash fs-4 text-white align-middle"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <th scope="row">1</th>
+                                    <td>Felipe</td>
+                                    <td>Yaruma</td>
+                                    <td>feliyaru</td>
+                                    <td>felipe@gmail.com </td>
+                                    <td>Cedula</td>
+                                    <td>123456789</td>
+                                    <td>Cobrador</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="bi bi-pencil-square fs-4 text-white align-middle"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger">
+                                            <i class="bi bi-trash fs-4 text-white align-middle"></i>
+                                        </button>
+                                    </td>
+                                </tbody>
+                            </table>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link">Anterior</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Siguiente</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Fin tabla emplados -->
+                        </div>
                     </div>
                     <!-- Fin Sección de Roles -->
-                </div>
-                <!-- Fin Content -->
-            </div>
 
-            <!-- Inicio sidebar derecho -->
-            <div class="col-2 p-0 collapse collapse-horizontal" id="sidebarNoti">
-                <div class="vh-100 bg-dark text-center">
-                    <h4 class="text-white pt-2">Notificaciones</h1>
-                        <hr class="border border-white border-2">
-                        <button type="button" class="btn btn-primary">
-                            Notificaciones <span class="badge text-bg-secondary">4</span>
-                        </button>
-                </div>
-            </div>
-            <!-- Fin  -->
+                    <hr class="border border-dark border-2">
 
-            <!-- Inicio footer -->
-            <div class="row text-center p-2" style="background-color: #e3f2fd;">
-                <div class="col-4">
-                    Footer 1
+                    <!-- Inicio Sección de Cobros -->
+                    <div class="m-4" id="seccionCobros">
+                        <h1><i class="bi bi-coin fs-1 text-dark me-2"></i>Cobros</h1>
+                        <div class="table-responsive">
+                            <div class="table-responsive">
+                                <!-- Inicio tabla asignar trabajo -->
+                                <nav class="navbar" style="background-color: #e3f2fd;">
+                                    <div class="container-fluid">
+                                        <a class="navbar-brand">Clientes</a>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <form class="d-flex m-0" role="search">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                                <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                                            </form>
+                                            <!-- Inicio Botón modal crear producto -->
+                                            <button type="submit" class="btn btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#modelCrearCliente">
+                                                <i class="bi bi-plus-circle fs-4 text-white align-middle me-2"></i>Crear
+                                                cliente
+                                            </button>
+                                            <!-- Fin Botón modal crear producto -->
+
+                                            <!-- Inicio Botón asignar inventario-->
+                                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#modalAsignarCobros">
+                                                <i class="bi bi-clipboard-plus fs-4 text-white align-middle"></i>
+                                                Asignar
+                                                Cobros
+                                            </button>
+                                            <!-- Fin Botón asignar inventario-->
+                                        </div>
+                                        <!-- Inicio modal crear cliente -->
+                                        <div class="modal fade" id="modelCrearCliente" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Crear Cliente
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        <!-- Formulario Crear cliente -->
+                                                        <form action="">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Nombres</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Pepito">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Apellidos</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Perez">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Tipo Documento</label>
+                                                                <select class="form-select">
+                                                                    <option selected>Seleccione una opción</option>
+                                                                    <option value="1">Cedula</option>
+                                                                    <option value="2">Pasaporte</option>
+                                                                    <option value="3">RUC</option>
+                                                                    <option value="4">Tarjeta Identidad</option>
+                                                                </select>
+                                                            </div>
+                                                            
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Numero Documento</label>
+                                                                <input type="number" class="form-control"
+                                                                    placeholder="10.838.489">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Telefono</label>
+                                                                <input type="number" class="form-control"
+                                                                    placeholder="3212529034">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">(Opcional) Telefono 2</label>
+                                                                <input type="number" class="form-control"
+                                                                    placeholder="3425896654">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Direccion</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Calle 5# 3-23">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">(Opcional) Direccion 2</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="CRA 56# 32-23">
+                                                            </div>
+                                                        </form>
+                                                        <!-- Fin formulario crear producto -->
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancelar</button>
+                                                        <button type="button" class="btn btn-primary">Crear</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- fin modal crear cliente -->
+
+                                        <!-- Inicio modal asignar cobros -->
+                                        <div class="modal fade" id="modalAsignarCobros" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Asignar
+                                                            cobro a
+                                                            empleado</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        <div class="table-responsive">
+                                                            <!-- Inicio tabla asignar cobros -->
+                                                            <nav class="navbar" style="background-color: #e3f2fd;">
+                                                                <div class="container-fluid">
+                                                                    <div
+                                                                        class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                                        <form class="d-flex m-0" role="search">
+                                                                            <input class="form-control me-2"
+                                                                                type="search" placeholder="Search"
+                                                                                aria-label="Search">
+                                                                            <button class="btn btn-outline-dark"
+                                                                                type="submit">Buscar</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </nav>
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">ID</th>
+                                                                        <th scope="col">Nombres</th>
+                                                                        <th scope="col">Apellidos</th>
+                                                                        <th scope="col">Usuario</th>
+                                                                        <th scope="col">Correo</th>
+                                                                        <th scope="col">Tipo Documento</th>
+                                                                        <th scope="col"># Documento</th>
+                                                                        <th scope="col">Rol</th>
+                                                                        <th scope="col">Acciones</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">1</th>
+                                                                        <td>Juan Pablo</td>
+                                                                        <td>Bernal Toledo</td>
+                                                                        <td>juanpablo</td>
+                                                                        <td>jp@gmail.com </td>
+                                                                        <td>Cedula</td>
+                                                                        <td>123456789</td>
+                                                                        <td>Vendedor</td>
+                                                                        <td>
+                                                                            <input type="checkbox" class="btn-check"
+                                                                                id="btn-check-outlined"
+                                                                                autocomplete="off">
+                                                                            <label class="btn btn-outline-primary"
+                                                                                for="btn-check-outlined">Seleccionar</label><br>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!-- Fin tabla asignar trabajo -->
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancelar</button>
+                                                        <button type="button" class="btn btn-success">
+                                                            <i
+                                                                class="bi bi-clipboard-plus fs-4 text-white align-middle"></i>
+                                                            Asignar
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- fin modal asignar cobros -->
+                                    </div>
+                                </nav>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Nombres</th>
+                                            <th scope="col">Apellidos</th>
+                                            <th scope="col">Tipo Documento</th>
+                                            <th scope="col"># Documento</th>
+                                            <th scope="col">Deuda</th>
+                                            <th scope="col">Ubicación</th>
+                                            <th scope="col">Accion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                            </th>
+                                            <th scope="row">1</th>
+                                            <td>Fernando</td>
+                                            <td>Campos</td>
+                                            <td>Cedula</td>
+                                            <td>2456432145</td>
+                                            <td>$85.000</td>
+                                            <td>
+                                                <button type="submit" class="btn btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#modalContacto">
+                                                    <i class="bi bi-eye fs-4 text-white align-middle me-2"></i>Ver
+                                                </button>
+
+                                                <!-- Inicio modal crear cliente -->
+                                        <div class="modal fade" id="modalContacto" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Contacto
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+
+                                                    <!-- Formulario Crear cliente -->
+                                                    <form action="">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Telefono</label>
+                                                            <input type="number" class="form-control"
+                                                                placeholder="3212529034"  disabled>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">(Opcional) Telefono 2</label>
+                                                            <input type="number" class="form-control"
+                                                                placeholder="3425896654" disabled>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Direccion</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Calle 5# 3-23" disabled>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">(Opcional) Direccion 2</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="CRA 56# 32-23" disabled>
+                                                        </div>
+                                                    </form>
+                                                    <!-- Fin formulario crear producto -->
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Volver</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- fin modal crear cliente -->
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger">
+                                                    <i class="bi bi-trash fs-4 text-white align-middle"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- Fin tabla asignar trabajo -->
+                            </div>
+                            <!-- Fin Sección de Cobros -->
+                        </div>
+                        <!-- Fin Content -->
+                    </div>
+
+                    <!-- Inicio sidebar derecho -->
+                    <div class="col-2 p-0 collapse collapse-horizontal" id="sidebarNoti">
+                        <div class="vh-100 bg-dark text-center">
+                            <h4 class="text-white pt-2">Notificaciones</h1>
+                                <hr class="border border-white border-2">
+                                <button type="button" class="btn btn-primary">
+                                    Notificaciones <span class="badge text-bg-secondary">4</span>
+                                </button>
+                        </div>
+                    </div>
+                    <!-- Fin  -->
+
+                    <!-- Inicio footer -->
+                    <div class="row text-center p-2" style="background-color: #e3f2fd;">
+                        <div class="col-4">
+                            Footer 1
+                        </div>
+                        <div class="col-4">
+                            Footer 2
+                        </div>
+                        <div class="col-4">
+                            Footer 3
+                        </div>
+                    </div>
+                    <!-- Fin footer -->
                 </div>
-                <div class="col-4">
-                    Footer 2
-                </div>
-                <div class="col-4">
-                    Footer 3
-                </div>
-            </div>
-            <!-- Fin footer -->
-        </div>
 
 
 
-        <!-- JS Bootstrap 5.2 -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-            crossorigin="anonymous"></script>
+                <!-- JS Bootstrap 5.2 -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                    crossorigin="anonymous"></script>
 </body>
 
 </html>
